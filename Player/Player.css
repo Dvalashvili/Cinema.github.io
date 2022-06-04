@@ -1,0 +1,124 @@
+body {
+    font-family: Noto_Sans_Georgian, Roboto-Regular, Noto_Sans-Regular;
+    background-color: rgb(24, 24, 24);
+    margin: 0;
+    font-size: 13px;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+player {
+    display: block;
+    overflow: hidden;
+
+    margin-left: 12%;
+    margin-right: 12%;
+
+    background-color: black;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+::cue {
+    visibility: hidden;
+}
+
+title {
+    display: block;
+    color: red;
+}
+
+:focus-visible {
+    outline: 2px solid rgb(0, 100, 200);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline-offset: -2px;
+}
+#volume-slider:focus-visible #volume-panel {
+    width: 52px;
+}
+#volume-slider:focus-visible {
+    width: 52px;
+}
+#Progress:focus-visible {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline-offset: 3px;
+}
+
+#PlayerContent {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+video {
+    pointer-events: none;
+    /* transition: 1s; */
+}
+#indexVolume {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    border: 1px green solid;
+}
+
+svg {
+    pointer-events: none;
+    transition-duration: 400ms;
+}
+path {
+    pointer-events: none;
+    transition-duration: 400ms;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
+
+
+/* #PlayerViewSize {
+    background-color: black;
+    border: blue dashed 1px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#VideoViewSize {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: rgba(255, 0, 0, 0.5) solid 1px;
+} */
+
+
+
+
+#poster {
+    height: 200px;
+    width: 100px;
+    background-color: rgb(85, 85, 85);
+}

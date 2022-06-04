@@ -1,0 +1,320 @@
+#ControlPanel {
+    height: 0px;
+    width: calc(100% - 24px);
+    left: 12px;
+
+    position: relative;
+    bottom: 64px;
+
+    box-shadow: rgb(0 0 0 / 50%) 0px 80px 80px 40px;
+    /* background-color: blue; */
+    transition: 200ms;
+}
+
+
+/* Up Control */
+#ProgressBar {
+    height: 16px;
+    width: 100%;
+}
+
+#Progress {
+    height: 5px;
+    padding-top: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#PlayedBar {
+    pointer-events: none;
+    height: 3px;
+    position: relative;
+    z-index: 1;
+    background-color: red;
+    transition: 100ms;
+}
+
+#FullBar {
+    pointer-events: none;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 100ms;
+}
+
+#SeekBar {
+    pointer-events: none;
+    height: 3px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 100ms;
+}
+
+/* #BufferedBar {
+
+}
+ */
+
+
+
+#ProgresThumb {
+    pointer-events: none;
+    width: 0;
+    z-index: 1;
+}
+
+#ThumbBall {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    transform: translateX(8px) scale(0);
+    transition: 100ms;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    float: right;
+}
+
+
+
+
+
+
+/* Up Control */
+
+
+
+/* Down Control */
+#Controls {
+    display: flex;
+    width: 100%;
+    height: 48px;
+}
+
+.button {
+    display: flex;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 48px;
+}
+
+
+.left-controls {
+    display: flex;
+    position: relative;
+    /* background-color: white; */
+}
+/* Left Controls */
+#prew-button {
+    padding: 0px;
+}
+#play-button {
+    padding: 0px 2px;
+}
+#next-button {
+    padding: 0px;
+}
+#volume-area {
+    display: flex;
+    pointer-events: all;
+}
+#mute-button {
+    padding: 6px;
+}
+
+/*  */
+
+.ytp-volume-panel {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    -webkit-transition: margin .2s cubic-bezier(0.4,0,1,1),width .2s cubic-bezier(0.4,0,1,1);
+    transition: margin .2s cubic-bezier(0.4,0,1,1),width .2s cubic-bezier(0.4,0,1,1);
+    cursor: pointer;
+    outline: 0;
+}
+
+.ytp-volume-slider {
+    height: 100%;
+    min-height: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.v-s-h {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: -6px;
+    background: #fff;
+}
+
+
+
+
+.v-s-h:before {
+    pointer-events: none;
+    /* left: -58px; */
+    background: #fff;
+}
+
+.v-s-h:before, .v-s-h:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    /* height: 3px; */
+    margin-top: -2px;
+    /* width: 64px; */
+}
+
+.v-s-h:after {
+    /* left: 6px; */
+    background: rgba(255,255,255,0.2);
+}
+
+/*  */
+.v-s-h_a:before {
+    left: -58px;
+}
+
+.v-s-h_a:before, .v-s-h_a:after {
+    height: 3px;
+    width: 64px;
+}
+
+.v-s-h_a:after {
+    left: 6px;
+}
+
+
+
+.v-s-h_b:before {
+    left: -87px;
+}
+
+.v-s-h_b:before, .v-s-h_b:after {
+    height: 4px;
+    width: 96px;
+}
+
+.v-s-h_b:after {
+    left: 9px;
+}
+
+
+
+.fs-svg {
+    transition: .25s;
+}
+
+
+
+
+
+
+
+
+#time-display {
+    padding: 0px 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+#time-display span {
+    display: flex;
+    color: white;
+    
+}
+/* Left Controls */
+
+
+
+
+
+
+
+
+
+.right-controls {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    /* background-color: white; */
+}
+/* Right Controls */
+#subtitles-button {
+    padding: 0px 2px;
+}
+#settings-button {
+    padding: 0px 2px;
+}
+#multicam-button {
+    padding: 0px 2px;
+}
+#miniplayer-button {
+    padding: 0px 4px;
+}
+#pip-button {
+    padding: 0px 2px;
+}
+#size-button {
+    padding: 0px 2px;
+}
+#original-button {
+    padding: 0px 4px;
+}
+#remote-button {
+    padding: 0px 4px;
+}
+#fullscreen-button {
+    padding: 0px 2px;
+}
+/* Right Controls */
+
+
+/* Down Control */
+#fullscreen-button::after {
+    content: "";
+    display: block;
+    width: 12px;
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: 100%;
+}
+#play-button:not(#prev-button)::before {
+    content: "";
+    display: block;
+    width: 12px;
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: -12px;
+}
+
+#prev-button[style*="display: none;"] #play-button {
+    background-color: red;
+}
+
+
+
+.textsvg {
+    fill: rgb(255, 255, 255);
+    font-size: 8px;
+    width: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+
+
